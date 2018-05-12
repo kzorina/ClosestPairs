@@ -1,4 +1,7 @@
+package algorithm
+
 import java.util.concurrent._
+
 import scala.io.Source
 object MyUtils {
   // The fork/join framework uses a work-stealing algorithm
@@ -37,7 +40,7 @@ object MyUtils {
   def readFromFile(path: String): List[(Int, Int)] = {
     var points: List[(Int, Int)] = List()
     for (line <- Source.fromFile(path).getLines()){
-      println(line)
+      //println(line)
       val new_point = line.split(' ') match {
         case Array(x, y) => (x.toInt, y.toInt)
       }
